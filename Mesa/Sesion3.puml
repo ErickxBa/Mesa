@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Mesa{
+
+    + poner(objeto: Object)
+    + quitar(): Object
+    + estaVacía(): boolean
+}
+
+class Pata{
+    - altura: double
+}
+
+class Cauchito{
+    - estado: Estado
+}
+
+Mesa -->"4" Pata: patas
+
+Mesa --> Item
+
+Pata --> Cauchito
+Mesa --> Color
+Pata --> Color
+
+class Color{
+    nombre: String
+}
+
+class Item{
+    - descripción: String
+}
+
+@enduml
